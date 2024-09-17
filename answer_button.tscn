@@ -1,0 +1,58 @@
+[gd_scene load_steps=7 format=3 uid="uid://btbh12qa7igjc"]
+
+[ext_resource type="Script" path="res://answer_button.gd" id="1_3h5jv"]
+
+[sub_resource type="Curve" id="Curve_515ge"]
+_data = [Vector2(0.630573, 0.859864), 0.0, 0.0, 0, 0, Vector2(0.889597, 0.869206), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="Curve" id="Curve_sdtum"]
+_data = [Vector2(0.280255, 0.574919), 0.0, 0.0, 0, 0, Vector2(0.641189, 0.701042), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="Curve" id="Curve_oj5ee"]
+_data = [Vector2(0.250531, 0.733741), 0.0, 0.0, 0, 0, Vector2(0.93206, 0.843514), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveXYZTexture" id="CurveXYZTexture_hrab8"]
+curve_x = SubResource("Curve_515ge")
+curve_y = SubResource("Curve_sdtum")
+curve_z = SubResource("Curve_oj5ee")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2p05j"]
+texture = SubResource("CurveXYZTexture_hrab8")
+modulate_color = Color(0.48973, 0.33517, 0.254779, 1)
+
+[node name="AnswerButton" type="Control"]
+custom_minimum_size = Vector2(130, 50)
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -65.0
+offset_top = -25.0
+offset_right = 65.0
+offset_bottom = 25.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_3h5jv")
+
+[node name="Button" type="Button" parent="."]
+custom_minimum_size = Vector2(300, 30)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -65.0
+offset_top = -15.0
+offset_right = 65.0
+offset_bottom = 15.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_hover_color = Color(0.407464, 0.652269, 0.851724, 1)
+theme_override_font_sizes/font_size = 30
+theme_override_styles/hover = SubResource("StyleBoxTexture_2p05j")

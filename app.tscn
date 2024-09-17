@@ -12,17 +12,50 @@ grow_vertical = 2
 script = ExtResource("1_1pumu")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
-layout_mode = 0
-offset_left = 82.0
-offset_top = 211.0
-offset_right = 569.0
-offset_bottom = 1064.0
+layout_mode = 1
+offset_left = 86.0
+offset_top = 292.0
+offset_right = 573.0
+offset_bottom = 566.0
 
-[node name="Hint" type="Label" parent="VBoxContainer"]
+[node name="Control" type="Control" parent="VBoxContainer"]
 layout_mode = 2
+
+[node name="Hint" type="Label" parent="VBoxContainer/Control"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -200.0
+offset_top = -70.0
+offset_right = 200.0
+grow_horizontal = 2
+grow_vertical = 0
 theme_override_font_sizes/font_size = 50
 text = "請選出正確的選項"
 
-[node name="Question" type="Label" parent="VBoxContainer"]
+[node name="Control2" type="Control" parent="VBoxContainer"]
 layout_mode = 2
+
+[node name="Question" type="Label" parent="VBoxContainer/Control2"]
+layout_mode = 1
+offset_left = 76.0
+offset_right = 487.0
+offset_bottom = 55.0
 theme_override_font_sizes/font_size = 40
+
+[node name="Answers" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -196.0
+offset_top = 5.0
+offset_right = 197.52
+offset_bottom = 300.632
+grow_horizontal = 2
+grow_vertical = 2
